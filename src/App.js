@@ -2,6 +2,7 @@ import './styles/App.css';
 import Navbar from "./components/UI/navbar/Navbar";
 import MyButton from "./components/UI/button/MyButton";
 import DishItem from "./components/DishItem";
+import DishList from "./components/DishList";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <Navbar/>
         <div className="main">
             <MyButton>Подобрать блюдо</MyButton>
-            <DishItem/>
+            <DishList/>
         </div>
     </div>
   );
