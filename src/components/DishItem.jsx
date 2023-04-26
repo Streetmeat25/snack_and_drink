@@ -3,13 +3,12 @@ import MyButton from "./UI/button/MyButton";
 import MyModal from "./UI/MyModal/MyModal";
 const DishItem = ({dish}) => {
     const [modal, setModal] = useState(false)
-
     return (
         <div className="dish">
             <div className="dish__content">
-                <strong>{dish.title}</strong>
+                <strong>{dish?.title}</strong>
                 <div>
-                    description
+                    {dish?.description}
                 </div>
             </div>
             <div className="dish__buttons">
@@ -18,7 +17,10 @@ const DishItem = ({dish}) => {
                 </MyButton>
             </div>
             <MyModal visible={modal} setVisible={setModal}>
-                fdsfdsfdfsdf
+                <strong>{dish?.title}</strong>
+                <div>
+                    {dish?.description}
+                </div>
             </MyModal>
         </div>
     );
