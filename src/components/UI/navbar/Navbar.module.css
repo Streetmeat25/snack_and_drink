@@ -4,11 +4,14 @@
     display: flex;
     align-items: center;
     padding: 0 15px;
-    background: lightskyblue;
     margin-bottom: 50px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    background-color: #fff;
 }
 .navbar_main{
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
+    font-size: 36px;
+    font-weight: bold;
 }

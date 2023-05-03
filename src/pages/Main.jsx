@@ -5,6 +5,7 @@ import Loader from "../components/UI/Loader/Loader";
 import DishItem from "../components/DishItem";
 import {useFetching} from "../hooks/useFetching";
 import DishService from "../API/DishService";
+import Filter from "../components/UI/Filter/Filter";
 
 const Main = () => {
     const [dishes, setDish] = useState([])
@@ -21,11 +22,16 @@ const Main = () => {
     return (
         <div className="main">
             <MyButton>Подобрать блюдо</MyButton>
-            {isDishesLoading ?
+
+            <div className='dishes-container'>
+                {isDishesLoading ?
                 <div style={{display:'flex', justifyContent:'center', marginTop: 50}}>
                     <Loader/>
-                </div>: <DishList dishes={dishes}/>
-            }
+                </div> :
+                <DishList dishes={dishes}/>
+                }
+                <Filter />
+            </div>
         </div>
     );
 };
