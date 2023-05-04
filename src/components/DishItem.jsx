@@ -11,12 +11,18 @@ const DishItem = ({dish}) => {
                 <p className="text-body">{dish?.description}</p>
             </div>
             <div className="card-footer">
-                <span className="text-title">$499.49</span>
-                <div className="card-button">
+
                     <MyButton onClick={() => setModal(true)}>
                         Посмотреть блюдо
                     </MyButton>
-                </div>
+
+                    <MyButton onClick={() => alert("show receipt of " + dish?.title)}>
+                        Показать рецепт
+                    </MyButton>
+                    <MyButton onClick={() => alert("order " + dish?.title)}>
+                        Заказать блюдо
+                    </MyButton>
+
             </div>
             <MyModal visible={modal} setVisible={setModal}>
                 <strong>{dish?.title}</strong>
