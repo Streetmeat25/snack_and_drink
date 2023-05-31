@@ -21,9 +21,8 @@ const Main = () => {
 
     return (
         <div className="main">
-            <MyButton>Подобрать блюдо</MyButton>
+            {/*<MyButton>Подобрать блюдо</MyButton>*/}
 
-            <div className='dishes-container'>
                 {isDishesLoading ?
                 <div style={{display:'flex', justifyContent:'center', marginTop: 50}}>
                     <Loader/>
@@ -31,7 +30,7 @@ const Main = () => {
                 <DishList dishes={dishes}/>
                 }
                 <Filter />
-            </div>
+
         </div>
     );
 };

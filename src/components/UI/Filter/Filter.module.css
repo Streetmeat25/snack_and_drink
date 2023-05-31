@@ -1,9 +1,12 @@
 .filter{
     display: flex;
     flex-direction: column;
+    width: 330px;
+    height: 800px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.16);
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px #00000040;
     padding: 10px;
+    border: 1px solid black;
 
 }

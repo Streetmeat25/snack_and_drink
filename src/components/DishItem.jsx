@@ -4,21 +4,19 @@ import MyModal from "./UI/MyModal/MyModal";
 const DishItem = ({dish}) => {
     const [modal, setModal] = useState(false)
     return (
-        <div className="card">
-            <div className="card-img"></div>
-            <div className="card-info">
-                <p className="text-title">{dish?.title} </p>
-                <p className="text-body">{dish?.description}</p>
+        <div className="dish-card">
+            <div className="dish-number">First Dish</div>
+            <div className="dish-card-img" style={{cursor:'pointer'}} onClick={()=> setModal(true)}></div>
+            <div className="dish-card-info">
+                <p className="dish-text-title">{dish?.title} </p>
+                <p className="dish-text-body">{dish?.description}</p>
             </div>
-            <div className="card-footer">
-
-                    <MyButton onClick={() => setModal(true)}>
-                        Посмотреть блюдо
-                    </MyButton>
+            <div className="dish-card-footer">
 
                     <MyButton onClick={() => alert("show receipt of " + dish?.title)}>
                         Показать рецепт
                     </MyButton>
+
                     <MyButton onClick={() => alert("order " + dish?.title)}>
                         Заказать блюдо
                     </MyButton>

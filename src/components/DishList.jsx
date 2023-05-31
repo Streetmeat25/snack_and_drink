@@ -7,6 +7,7 @@ const DishList = ({dishes}) => {
         <div className="dish-list">
             <DishItem dish={dishes[Math.floor(Math.random() * dishes.length)]}/>
             <DishItem dish={dishes[Math.floor(Math.random() * dishes.length)]}/>
+            <DishItem dish={dishes[Math.floor(Math.random() * dishes.length)]}/>
         </div>
     );
 };
