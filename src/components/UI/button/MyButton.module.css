@@ -6,3 +6,8 @@
     border: 1px solid teal;
     cursor: pointer;
 }
+img{
+    background-color: white;
+    height: 50px;
+    width: 50px;
+}

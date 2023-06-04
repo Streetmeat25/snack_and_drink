@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import MyButton from "./UI/button/MyButton";
-import MyModal from "./UI/MyModal/MyModal";
-const DishItem = ({dish}) => {
+import MyModal from "./modals/MyModal/MyModal";
+import {Link, useNavigate} from "react-router-dom";
+const DishItem = ({dish, dishNumber}) => {
     const [modal, setModal] = useState(false)
+    const navigate = useNavigate();
     return (
         <div className="dish-card">
-            <div className="dish-number">First Dish</div>
+            <div className="dish-number">{dishNumber}</div>
             <div className="dish-card-img" style={{cursor:'pointer'}} onClick={()=> setModal(true)}></div>
             <div className="dish-card-info">
                 <p className="dish-text-title">{dish?.title} </p>
@@ -13,11 +15,11 @@ const DishItem = ({dish}) => {
             </div>
             <div className="dish-card-footer">
 
-                    <MyButton onClick={() => alert("show receipt of " + dish?.title)}>
+                    <MyButton onClick={() => navigate('receipt', {state: dish})}>
                         Показать рецепт
                     </MyButton>
 
-                    <MyButton onClick={() => alert("order " + dish?.title)}>
+                    <MyButton onClick={()  => navigate( "buy", {state: dish} )}>
                         Заказать блюдо
                     </MyButton>
 
