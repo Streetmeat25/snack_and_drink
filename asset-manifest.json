@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/snack_and_drink/static/css/main.62cc5859.css",
+    "main.js": "/snack_and_drink/static/js/main.38619baa.js",
+    "index.html": "/snack_and_drink/index.html",
+    "main.62cc5859.css.map": "/snack_and_drink/static/css/main.62cc5859.css.map",
+    "main.38619baa.js.map": "/snack_and_drink/static/js/main.38619baa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62cc5859.css",
+    "static/js/main.38619baa.js"
+  ]
+}
