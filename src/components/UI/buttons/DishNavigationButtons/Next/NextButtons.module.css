@@ -1,0 +1,10 @@
+.nextButton{
+    position: absolute;
+    top: 453px; left: 1186px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: transparent;
+}

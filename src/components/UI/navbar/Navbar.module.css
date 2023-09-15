@@ -2,18 +2,21 @@
     height: 50px;
     width: 100vw;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 15px;
+    margin-top: 60px;
     margin-bottom: 50px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.1);
-    background-color: #fff;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 87px;
+    line-height: 110px;
+    color: white;
 }
 .navbar_main{
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 36px;
-    font-weight: bold;
+    /*display: flex;*/
+    /*max-width: 1200px;*/
+    /*margin: 0 auto;*/
+
 }
 p {
     background-color: white;

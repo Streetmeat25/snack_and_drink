@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import MyButton from "../components/UI/button/MyButton";
+import MyButton from "../components/UI/buttons/MyButton";
 import DishList from "../components/DishList";
 import Loader from "../components/UI/Loader/Loader";
 import DishItem from "../components/DishItem";
@@ -23,13 +23,13 @@ const Main = () => {
         <div className="main">
             {/*<MyButton>Подобрать блюдо</MyButton>*/}
 
-                {isDishesLoading ?
-                <div style={{display:'flex', justifyContent:'center', marginTop: 50}}>
-                    <Loader/>
-                </div> :
-                <DishList dishes={dishes}/>
-                }
-                <Filter />
+            <Filter />
+            {isDishesLoading ?
+            <div style={{display:'flex', justifyContent:'center', marginTop: 50}}>
+            <Loader/>
+            </div> :
+            <DishList dishes={dishes}/>
+            }
 
         </div>
     );

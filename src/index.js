@@ -12,11 +12,12 @@ const router = createBrowserRouter([
         element: <App />,
         errorElement: <div> Page Not Found</div>
     },
-{
-    path: "https://github.com/Streetmeat25/snack_and_drink/settings/pages",
-        element: <App />,
-    errorElement: <div> Page Not Found</div>
-},
+    // не помню что это....
+    // {
+    //     path: "https://github.com/Streetmeat25/snack_and_drink/settings/pages",
+    //     element: <App />,
+    //     errorElement: <div> Page Not Found</div>
+    // },
     {
         path: "/receipt",
         element: <Receipt />,
