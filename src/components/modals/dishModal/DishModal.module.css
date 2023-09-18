@@ -1,18 +1,5 @@
-.DishModal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
-}
-.DishModal.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .main{
+
     /*width: 1188px;*/
     /*height: 1701px;*/
     border-radius: 20px;
@@ -20,7 +7,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
+
+
 
 .dishImg{
     border-radius: 20px 20px 0 0;
@@ -39,27 +29,50 @@
 .dishDescription h1{
     background-color: transparent;
     margin-bottom: 50px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 .dishDescription p {
     width: 1028px;
     background-color: transparent;
     margin-bottom: 50px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: normal;
 }
 .dishDescription a{
     cursor: pointer;
-    color: grey;
-    text-decoration: underline;
+    background-color: transparent;
     margin-bottom: 70px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    text-decoration-line: underline;
 }
 
 .dishDescription button{
     cursor: pointer;
     margin: auto;
     background-color: black;
-    color: white;
     border-radius: 10px;
     padding: 15px 25px;
     margin-bottom: 70px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121.687%; /* 24.337px */
 }
 .dishOrderAddresses{
     background-color: transparent;
@@ -69,4 +82,43 @@
     align-items: flex-start;
     padding: 80px;
 }
+.restaurantName{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    width: 192px;
+    margin-bottom: 10px;
+
+}
+.dishOrderAddresses h1 {
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: transparent;
+    margin-right: 25px;
+}
+.dishOrderAddresses h2 {
+    color: #595959;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    background-color: transparent;
+}
+.dishOrderAddresses p {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.dishOrderAddresses hr{
+    margin: 33px 0 33px 0;
+}
+
 

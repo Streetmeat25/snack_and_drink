@@ -5,6 +5,8 @@ import {Link, useNavigate} from "react-router-dom";
 import dishPic from './borsch.png'
 import NextButton from "./UI/buttons/DishNavigationButtons/Next/NextButton";
 import PreviousButton from "./UI/buttons/DishNavigationButtons/Previous/PreviousButton";
+import DishModal from "./modals/dishModal/DishModal";
+import Navbar from "./UI/navbar/Navbar";
 const DishItem = ({dish, dishNumber}) => {
     const [modal, setModal] = useState(false)
     const navigate = useNavigate();
@@ -32,12 +34,19 @@ const DishItem = ({dish, dishNumber}) => {
                     {/*</MyButton>*/}
 
             {/*</div>*/}
+
             <MyModal visible={modal} setVisible={setModal}>
-                <strong>{dish?.title}</strong>
-                <div>
-                    {dish?.description}
-                </div>
+                {/*<strong>{dish?.title}</strong>*/}
+                {/*<div>*/}
+                {/*    {dish?.description}*/}
+                {/*</div>*/}
+
+
+                <DishModal>
+                </DishModal>
+
             </MyModal>
+
         </div>
     );
 };

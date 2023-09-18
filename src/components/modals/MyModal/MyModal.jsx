@@ -11,7 +11,6 @@ const MyModal = ({children, visible, setVisible}) => {
         <div className={rootClasses.join(' ')} onClick={() => setVisible(false)}>
             <div className={classes.myModalContent} onClick={(e) => e.stopPropagation()}>
                 {children}
-                <div className={classes.modal_img}></div>
             </div>
 
         </div>
