@@ -25,6 +25,7 @@
 
 }
 .dish-card{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +34,16 @@
   border-radius: 20px;
   background: white;
   margin-bottom: 75px;
+}
+.dish-card .dish-buttons{
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+
+
 }
 
 .dish-card-img{

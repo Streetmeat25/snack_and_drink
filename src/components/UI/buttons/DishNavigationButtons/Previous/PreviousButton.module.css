@@ -1,11 +1,9 @@
 .previousButton{
-    position: absolute;
-    top: 453px; left: 625px;
+    position: relative;
+    left: -25px;
     height: 50px;
     width: 50px;
     border: none;
     cursor: pointer;
-    appearance: none;
     background-color: transparent;
-
 }

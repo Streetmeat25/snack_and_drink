@@ -7,48 +7,33 @@ import NextButton from "./UI/buttons/DishNavigationButtons/Next/NextButton";
 import PreviousButton from "./UI/buttons/DishNavigationButtons/Previous/PreviousButton";
 import DishModal from "./modals/dishModal/DishModal";
 import Navbar from "./UI/navbar/Navbar";
+
 const DishItem = ({dish, dishNumber}) => {
     const [modal, setModal] = useState(false)
     const navigate = useNavigate();
+    console.log(dish, dishNumber)
     return (
         <div className="dish-card">
-            <div className="dish-card-img" style={{cursor:'pointer'}} onClick={()=> setModal(true)}>
+            <div className="dish-card-img" style={{cursor: 'pointer'}} onClick={() => setModal(true)}>
+
+            </div>
+            <div className="dish-buttons">
+
                 <PreviousButton/>
                 <NextButton/>
             </div>
 
             <div className="dish-card-info">
-                <p className="dish-name">{dish?.title} </p>
-                {/*<p className="dish-category">{dish?.description}</p>*/}
-                <p className="dish-category">Супы</p>
-
+                <p className="dish-name">{dish?.name} </p>
+                <p className="dish-category">{dish?.category}</p>
             </div>
-            {/*<div className="dish-card-footer">*/}
-
-            {/*        <MyButton onClick={() => navigate('receipt', {state: dish})}>*/}
-            {/*            Показать рецепт*/}
-            {/*        </MyButton>*/}
-
-                    {/*<MyButton onClick={()  => navigate( "buy", {state: dish} )}>*/}
-                    {/*    Заказать блюдо*/}
-                    {/*</MyButton>*/}
-
-            {/*</div>*/}
 
             <MyModal visible={modal} setVisible={setModal}>
-                {/*<strong>{dish?.title}</strong>*/}
-                {/*<div>*/}
-                {/*    {dish?.description}*/}
-                {/*</div>*/}
-
-
-                <DishModal>
+                <DishModal dish={dish}>
                 </DishModal>
-
             </MyModal>
 
-        </div>
-    );
+        </div>);
 };
 
 export default DishItem;
