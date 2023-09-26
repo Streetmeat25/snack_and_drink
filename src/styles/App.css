@@ -35,15 +35,16 @@
   background: white;
   margin-bottom: 75px;
 }
-.dish-card .dish-buttons{
+.dish-buttons{
   background: transparent;
   position: absolute;
   width: 100%;
   top: 50%;
   display: flex;
   justify-content: space-between;
-
-
+}
+.dish-buttons svg{
+  background: transparent;
 }
 
 .dish-card-img{

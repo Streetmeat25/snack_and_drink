@@ -1,4 +1,4 @@
-.filter{
+.filter {
     display: flex;
     flex-direction: column;
     width: 558px;
@@ -6,37 +6,73 @@
     justify-content: space-between;
 
 }
-.mealTime{
+
+.mealTime {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+
+}
+
+.mealTimeButton {
+    width: 113px;
+    height: 34px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
+    cursor: pointer;
+}
 
-}
-.mealTime a{
-    width: 113px;
-    height: 34px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mealTime a:hover {
+.mealTimeButton:hover {
     color: white;
     background: black;
     border-radius: 25px;
 
 }
-.mealType{
+
+.mealTimeButtonActive {
+    width: 113px;
+    height: 34px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    cursor: pointer;
+    color: white;
+    background: black;
+    border-radius: 25px;
+
+}
+
+.mealType {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
-.mealType svg:hover{
 
+.mealTypeButton {
+    border: none;
+    cursor: pointer;
+}
+
+.mealTypeButton:hover svg {
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.mealTypeButtonActive svg {
     border-radius: 25px;
     border: 1px solid black;
 }
