@@ -9,7 +9,7 @@ const DishList = ({dishes}) => {
             <DishItem dish={dishes[randomDishNumber]} dishNumber="FirstDish"/>
             {/*<DishItem dish={dishes[Math.floor(Math.random() * dishes.length)]} dishNumber="SecondDish"/>*/}
             {/*<DishItem dish={dishes[Math.floor(Math.random() * dishes.length)]} dishNumber="Drink"/>*/}
-            <UpdateButton onClick={() => setRandomDishNumber(Math.floor(Math.random() * dishes?.length))}>
+            <UpdateButton onClick={() => setRandomDishNumber(Math.floor(Math.random() * dishes?.length) )}>
                 Обновить
             </UpdateButton>
         </div>

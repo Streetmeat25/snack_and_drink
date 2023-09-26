@@ -1,9 +1,11 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import dishReducer from './reducers/dishSlice'
+import filterReducer from './reducers/filterSlice'
 import {dishApi} from "../services/DishService";
 
 
 const rootReducer = combineReducers({
+    filterReducer,
     dishReducer,
     [dishApi.reducerPath]: dishApi.reducer
 })

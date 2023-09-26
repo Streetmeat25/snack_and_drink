@@ -2,8 +2,6 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
     dishes: [],
-    isLoading: false,
-    error: '',
 }
 
 export const dishSlice = createSlice({
