@@ -7,6 +7,7 @@ import {useFetching} from "../hooks/useFetching";
 // import DishService from "../services/DishService";
 import Filter from "../components/UI/Filter/Filter";
 import {dishApi} from "../services/DishService"
+import UpdateButton from "../components/UI/buttons/UpdateButton/UpdateButton";
 
 const Main = () => {
     // const [dishes, setDish] = useState([])
@@ -15,7 +16,7 @@ const Main = () => {
     //     const response = await DishService.getAll()
     //     setDish([...dishes, ...response])
     // })
-    const { data: dishes, error, isLoading} = dishApi.useFetchAllDishesQuery('')
+    const {data: dishes, error, isLoading} = dishApi.useFetchAllDishesQuery('')
 
 
     useEffect(() => {
@@ -27,19 +28,22 @@ const Main = () => {
 
             {/*<MyButton>Подобрать блюдо</MyButton>*/}
 
-            <Filter />
+            <Filter/>
             {isLoading ? (
-                <div style={{display:'flex', justifyContent:'center', marginTop: 50}}>
+                <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>
                     <Loader/>
                 </div>
             ) : error ? (
-                <div style={{display:'flex', justifyContent:'center', marginTop: 50}}>
-                    Ошибка загрузки данных
-                </div>
+                    <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>
+                        Ошибка загрузки данных
+                    </div>
                 )
                 : (
-                <DishList dishes={dishes}/>
+                    <DishList dishes={dishes}/>
+
+
                 )
+
 
             }
 
