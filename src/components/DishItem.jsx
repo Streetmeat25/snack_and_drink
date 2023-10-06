@@ -11,10 +11,10 @@ import Navbar from "./UI/navbar/Navbar";
 const DishItem = ({dish, dishNumber}) => {
     const [modal, setModal] = useState(false)
     const navigate = useNavigate();
-    console.log(dish, dishNumber)
+    console.log(dish, process.env.PUBLIC_URL)
     return (
         <div className="dish-card">
-            <div className="dish-card-img" style={{cursor: 'pointer'}} onClick={() => setModal(true)}>
+            <div className="dish-card-img" style={{cursor: 'pointer', background:`#d6d6d6  url(${process.env.PUBLIC_URL + dish?.imgPath})`}} onClick={() => setModal(true)}>
 
             </div>
             <div className="dish-buttons">
