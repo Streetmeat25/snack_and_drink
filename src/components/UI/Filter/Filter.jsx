@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Filter.module.css'
-import MyButton from "../buttons/MyButton";
 import {useDispatch, useSelector} from "react-redux";
 import {filterSlice} from "../../../store/reducers/filterSlice";
 

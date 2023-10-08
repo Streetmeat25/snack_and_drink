@@ -8,6 +8,9 @@ import {useFetching} from "../hooks/useFetching";
 import Filter from "../components/UI/Filter/Filter";
 import {dishApi} from "../services/DishService"
 import UpdateButton from "../components/UI/buttons/UpdateButton/UpdateButton";
+import {useDispatch} from "react-redux";
+import {filterSlice} from "../store/reducers/filterSlice";
+import {dishSlice} from "../store/reducers/dishSlice";
 
 const Main = () => {
     // const [dishes, setDish] = useState([])
@@ -17,10 +20,14 @@ const Main = () => {
     //     setDish([...dishes, ...response])
     // })
     const {data: dishes, error, isLoading} = dishApi.useFetchAllDishesQuery('')
+    const dispatch = useDispatch()
+    const {setDishes} = dishSlice.actions
+
+    dispatch(setDishes(dishes))
 
 
     useEffect(() => {
-        // fetchPosts()
+
     }, [])
 
     return (

@@ -7,7 +7,11 @@ const initialState = {
 export const dishSlice = createSlice({
     name:'dish',
     initialState,
-    reducers: {},
+    reducers: {
+        setDishes:(state,action) => {
+            state.dishes = action.payload;
+        }
+    },
 
 })
 
