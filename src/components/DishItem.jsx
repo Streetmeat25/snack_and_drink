@@ -3,7 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import NextButton from "./UI/buttons/DishNavigationButtons/Next/NextButton";
 import PreviousButton from "./UI/buttons/DishNavigationButtons/Previous/PreviousButton";
 import DishModal from "./modals/dishModal/DishModal";
-import {Modal} from "@mui/material";
+import {Button, Modal} from "@mui/material";
 import classes from "./modals/dishModal/DishModal.module.css";
 
 const DishItem = ({dish, dishNumber}) => {
@@ -11,10 +11,8 @@ const DishItem = ({dish, dishNumber}) => {
     const navigate = useNavigate();
 
 
-
     return (
         <div className="dish-card">
-
 
             <Link to={"/dish"} state={dish}>
                 <div className="dish-card-img"
@@ -31,7 +29,7 @@ const DishItem = ({dish, dishNumber}) => {
                 <p className="dish-name">{dish?.name} </p>
                 <p className="dish-category">{dish?.category}</p>
             </div>
-            
+
             {/*<MyModal visible={modal} setVisible={setModal}>*/}
             {/*    <DishModal dish={dish}>*/}
             {/*    </DishModal>*/}

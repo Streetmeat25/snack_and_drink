@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import classes from './DishModal.module.css'
 import {Link, useLocation} from "react-router-dom";
+import {Button, IconButton, SvgIcon} from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
 const DishModal = ({dish}) => {
 
     const [isAddressesVisible, setAddressesVisible] = useState(false);
@@ -10,9 +12,14 @@ const DishModal = ({dish}) => {
     dish = location?.state
     return (
         <div>
-            <Link to={`*`}>
-                <button>back</button>
-                
+            <Link to={`/`}>
+                <Button startIcon={<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.33333 2.70831L1.625 5.41665L4.33333 8.12498" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.625 5.41663H5.95833C8.94996 5.41663 11.375 7.84167 11.375 10.8333V11.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                }>
+                    Вернуться
+                </Button>
             </Link>
             <div className={classes.dishImg}>
             </div>

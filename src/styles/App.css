@@ -24,6 +24,9 @@
 
 
 }
+/*временный фикс чтобы материал кнопки работали*/
+span{background: transparent}
+/**/
 .dish-card{
   position: relative;
   display: flex;
