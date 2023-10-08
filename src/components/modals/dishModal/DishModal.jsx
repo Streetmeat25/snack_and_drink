@@ -1,13 +1,19 @@
 import React, {useState} from 'react';
 import classes from './DishModal.module.css'
+import {Link, useLocation} from "react-router-dom";
 const DishModal = ({dish}) => {
 
     const [isAddressesVisible, setAddressesVisible] = useState(false);
     const [isReceiptVisible, setReceiptVisible] = useState(false);
+    const location = useLocation()
 
-
+    dish = location?.state
     return (
         <div>
+            <Link to={`*`}>
+                <button>back</button>
+                
+            </Link>
             <div className={classes.dishImg}>
             </div>
             {

@@ -6,6 +6,7 @@ import Receipt from "./pages/Receipt";
 import Buy from "./pages/Buy";
 import {setupStore} from './store/store'
 import { Provider} from 'react-redux'
+import DishModal from "./components/modals/dishModal/DishModal";
 
 const router = createBrowserRouter([
 
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
     {
         path: "/buy",
         element: <Buy/>,
+        errorElement: <div> Page Not Found</div>
+    },
+    {
+        path: "/dish",
+        element: <DishModal/>,
         errorElement: <div> Page Not Found</div>
     }
 ])
