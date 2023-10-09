@@ -7,12 +7,19 @@
     padding: 0 15px;
     margin-top: 60px;
     margin-bottom: 50px;
-    font-family: 'Caveat Brush', cursive;
-    font-size: 87px;
-    line-height: 110px;
-    color: white;
+
 }
 
-p {
-    background-color: white;
+h1 {
+    color: #FFF;
+    text-align: center;
+    /*font-family: Pacifico;*/
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 100px 0 100px;
+
+    font-family: 'Caveat Brush', cursive;
+
 }
