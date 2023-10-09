@@ -57,8 +57,9 @@ span{background: transparent}
   width: 560px;
   height: 400px;
   border-radius: 20px 20px 0 0;
-  background-size: contain;
-  /*background: #D9D9D9 url(../assets/img/dishes/borsch.png);*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .dish-card-info{
   height: 85px;

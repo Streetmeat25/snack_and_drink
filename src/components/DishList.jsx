@@ -9,9 +9,9 @@ const DishList = ({dishes}) => {
         <div className="dish-list">
             <DishItem dish={dishes[dishNumber]}/>
             <IconButton
-                onClick={()=> {
-                    if(dishNumber == 0) return
-                    setDishNumber(i => i-1);
+                onClick={() => {
+                    if (dishNumber == 0) return
+                    setDishNumber(i => i - 1);
                 }}
                 style={{position: "absolute", top: "30%", left: "-6%", background: "transparent"}}>
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,9 +24,9 @@ const DishList = ({dishes}) => {
                 </svg>
             </IconButton>
             <IconButton
-                onClick={()=> {
-                    if(dishNumber == dishes.length - 1) return
-                    setDishNumber(i => i+1);
+                onClick={() => {
+                    if (dishNumber == dishes.length - 1) return
+                    setDishNumber(i => i + 1);
                 }}
                 style={{position: "absolute", top: "30%", left: "94%"}}>
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="transparent" xmlns="http://www.w3.org/2000/svg">

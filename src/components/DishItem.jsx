@@ -16,7 +16,7 @@ const DishItem = ({dish}) => {
         <div className="dish-card">
             <Link to={"/dish"} state={dish}>
                 <div className="dish-card-img"
-                     style={{cursor: 'pointer', background: `#d6d6d6  url(${process.env.PUBLIC_URL + dish?.imgPath})`}}>
+                     style={{cursor: 'pointer', backgroundImage:`url(${process.env.PUBLIC_URL + dish?.imgPath})`}}>
                 </div>
             </Link>
 
