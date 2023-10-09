@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f6f6f6;
+  background-color: #7DE4DC;
+}
+svg{
+  background-color: transparent;
 }
 
 #root{
@@ -14,91 +17,86 @@
 .main{
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.dishes-container{
-  display: flex;
-  margin-top: 15px;
-}
-.dish{
-  display: flex;
-
-  padding: 15px;
-  border: 2px solid blueviolet;
-  margin-top: 15px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.dish__content{
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .dish-list{
-  width: 100%;
-  margin-right: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.card {
-  height: 254px;
-  padding: 10px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.16);
-  margin-bottom: 15px;
 }
 
-.card-img {
-  background-color: #ffcaa6;
-  height: 40%;
-  width: 100%;
-  border-radius: .5rem;
-  transition: .3s ease;
-}
-
-.card-info {
-  padding-top: 1%;
-  background-color: #fff;
-}
-
-.card-footer {
-  width: 100%;
+/*временный фикс чтобы материал кнопки работали*/
+span{background: transparent}
+/**/
+.dish-card{
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
-  gap: 5px;
-  background-color: #fff;
+  width: 560px;
+  height: 485px;
+  border-radius: 20px;
+  background: white;
+  margin-bottom: 75px;
+}
+.dish-buttons{
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.dish-buttons svg{
+  background: transparent;
 }
 
-/*Text*/
-.text-title {
-  font-weight: 900;
-  font-size: 1.2em;
-  line-height: 1.5;
-  background-color: #fff;
+.dish-card-img{
+  width: 560px;
+  height: 400px;
+  border-radius: 20px 20px 0 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dish-card-info{
+  height: 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+  background-color: transparent;
+  margin-left: 50px;
+
+}
+.dish-name{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #000000;
+  font-family: 'Caveat Brush', cursive;
+  margin-right: 10px;
+
+}
+.dish-category{
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
 }
 
-.text-body {
-  font-size: .9em;
-  padding-bottom: 10px;
-  background-color: #fff;
-}
-
-/*Hover*/
-.card-img:hover {
-  transform: translateY(-25%);
-  box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
-}
 
 

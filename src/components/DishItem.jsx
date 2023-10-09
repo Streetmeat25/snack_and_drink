@@ -1,37 +1,32 @@
 import React, {useState} from 'react';
-import MyButton from "./UI/button/MyButton";
-import MyModal from "./UI/MyModal/MyModal";
+import {Link, useNavigate} from "react-router-dom";
+import NextButton from "./UI/buttons/DishNavigationButtons/Next/NextButton";
+import PreviousButton from "./UI/buttons/DishNavigationButtons/Previous/PreviousButton";
+import DishModal from "./modals/dishModal/DishModal";
+import {Button, IconButton, Modal} from "@mui/material";
+import classes from "./modals/dishModal/DishModal.module.css";
+import {useDispatch, useSelector} from "react-redux";
+
 const DishItem = ({dish}) => {
     const [modal, setModal] = useState(false)
+    const navigate = useNavigate();
+
+
     return (
-        <div className="card">
-            <div className="card-img"></div>
-            <div className="card-info">
-                <p className="text-title">{dish?.title} </p>
-                <p className="text-body">{dish?.description}</p>
-            </div>
-            <div className="card-footer">
-
-                    <MyButton onClick={() => setModal(true)}>
-                        Посмотреть блюдо
-                    </MyButton>
-
-                    <MyButton onClick={() => alert("show receipt of " + dish?.title)}>
-                        Показать рецепт
-                    </MyButton>
-                    <MyButton onClick={() => alert("order " + dish?.title)}>
-                        Заказать блюдо
-                    </MyButton>
-
-            </div>
-            <MyModal visible={modal} setVisible={setModal}>
-                <strong>{dish?.title}</strong>
-                <div>
-                    {dish?.description}
+        <div className="dish-card">
+            <Link to={"/dish"} state={dish}>
+                <div className="dish-card-img"
+                     style={{cursor: 'pointer', backgroundImage:`url(${process.env.PUBLIC_URL + dish?.imgPath})`}}>
                 </div>
-            </MyModal>
-        </div>
-    );
+            </Link>
+
+            <div className="dish-card-info">
+                <p className="dish-name">{dish?.name} </p>
+                <p className="dish-category">{dish?.category}</p>
+            </div>
+
+
+        </div>);
 };
 
 export default DishItem;

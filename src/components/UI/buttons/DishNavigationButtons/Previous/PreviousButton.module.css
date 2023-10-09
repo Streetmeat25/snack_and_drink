@@ -1,0 +1,9 @@
+.previousButton{
+    position: relative;
+    left: -25px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}

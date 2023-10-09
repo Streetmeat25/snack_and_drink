@@ -1,9 +1,78 @@
-.filter{
+.filter {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.16);
-    padding: 10px;
+    width: 558px;
+    height: 132px;
+    justify-content: space-between;
 
+}
+
+.mealTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.mealTimeButton {
+    width: 113px;
+    height: 34px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.mealTimeButton:hover {
+    color: white;
+    background: black;
+    border-radius: 25px;
+
+}
+
+.mealTimeButtonActive {
+    width: 113px;
+    height: 34px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    cursor: pointer;
+    color: white;
+    background: black;
+    border-radius: 25px;
+
+}
+
+.mealType {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mealTypeButton {
+    border: none;
+    cursor: pointer;
+}
+
+.mealTypeButton:hover svg {
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.mealTypeButtonActive svg {
+    border-radius: 25px;
+    border: 1px solid black;
 }
