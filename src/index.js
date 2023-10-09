@@ -7,7 +7,7 @@ import Buy from "./pages/Buy";
 import {setupStore} from './store/store'
 import { Provider} from 'react-redux'
 import DishModal from "./components/modals/dishModal/DishModal";
-import Dish from "./pages/Dish";
+import Dish from "./pages/Dish/Dish";
 
 const router = createBrowserRouter([
 

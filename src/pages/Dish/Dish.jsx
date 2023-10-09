@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import classes from '../components/modals/dishModal/DishModal.module.css'
+import classes from './Dish.module.css'
 import {Link, useLocation} from "react-router-dom";
 import {Button, IconButton, SvgIcon} from "@mui/material";
 const Dish = () => {

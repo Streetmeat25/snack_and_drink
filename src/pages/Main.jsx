@@ -11,6 +11,7 @@ import UpdateButton from "../components/UI/buttons/UpdateButton/UpdateButton";
 import {useDispatch} from "react-redux";
 import {filterSlice} from "../store/reducers/filterSlice";
 import {dishSlice} from "../store/reducers/dishSlice";
+import Cart from "../components/UI/cart/Cart";
 
 const Main = () => {
     // const [dishes, setDish] = useState([])
@@ -33,8 +34,7 @@ const Main = () => {
     return (
         <div className="main">
 
-            {/*<MyButton>Подобрать блюдо</MyButton>*/}
-
+            <Cart/>
             <Filter/>
             {isLoading ? (
                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>
