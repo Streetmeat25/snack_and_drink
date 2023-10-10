@@ -4,8 +4,8 @@
     position: absolute;
     z-index: 1000;
     top: 10%;
-    left: 80%;
-    width: 400px;
+    left: 75%;
+    width: 373px;
 
 }
 
@@ -14,4 +14,16 @@
     justify-content: space-evenly;
     padding-bottom: 44px;
 
+}
+.navBar p {
+    color: #FFF;
+    font-family: Caveat Brush;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.dishList{
+    display: flex;
+    flex-direction: column;
 }

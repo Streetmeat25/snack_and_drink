@@ -16,6 +16,7 @@
 }
 
 .mealTimeButton {
+    background-color: transparent;
     width: 113px;
     height: 34px;
     border-radius: 25px;
@@ -63,6 +64,7 @@
 }
 
 .mealTypeButton {
+    background-color: transparent;
     border: none;
     cursor: pointer;
 }
