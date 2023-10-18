@@ -2,9 +2,14 @@ import React, {useEffect, useState} from 'react';
 import DishItem from "./DishItem";
 import UpdateButton from "./UI/buttons/UpdateButton/UpdateButton";
 import {IconButton} from "@mui/material";
+import {useDispatch} from "react-redux";
+import {cartSlice} from "../store/reducers/cartSlice";
 
 const DishList = ({dishes}) => {
     const [dishNumber, setDishNumber] = useState(0)
+    const dispatch = useDispatch()
+    const {addToCart, deleteFromCart} = cartSlice.actions
+
     return (
         <div className="dish-list">
             <DishItem dish={dishes[dishNumber]}/>
@@ -38,7 +43,7 @@ const DishList = ({dishes}) => {
                 </svg>
             </IconButton>
 
-            <UpdateButton>
+            <UpdateButton onClick={()=> dispatch(addToCart(dishes[dishNumber]))}>
                 + Добавить
             </UpdateButton>
         </div>
