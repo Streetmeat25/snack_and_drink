@@ -12,9 +12,10 @@ export const cartSlice = createSlice({
             state.cart.push(action.payload);
         },
         deleteFromCart:(state,action) => {
+            console.log(action.payload)
+
             let index = state.cart.indexOf(action.payload)
             state.cart = state.cart.splice(index , 1)
-            console.log(action.payload)
         },
     }
 })

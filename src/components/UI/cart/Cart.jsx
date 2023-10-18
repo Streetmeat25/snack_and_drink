@@ -18,8 +18,8 @@ const Cart = () => {
             </div>
             <div className={classes.dishList}>
                 {
-                    cart.map(el =>
-                    <DishCard dish={el} isLiked={true}/>
+                    cart.map((el, index) =>
+                    <DishCard key={index} dish={el} isLiked={true}/>
                     )
                 }
             </div>
