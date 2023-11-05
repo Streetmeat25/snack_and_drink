@@ -10,7 +10,7 @@ const DishCard = ({dish,isLiked}) => {
 
     return (
         <div className={classes.main}>
-            <img className={classes.dishImg} src={process.env.PUBLIC_URL + dish.imgPath}/>
+            <img className={classes.dishImg} src={dish.imgPath}/>
             <div className={classes.cardInfo}>
                 <h1>{dish.name}</h1>
                 <h2>{dish.category}</h2>

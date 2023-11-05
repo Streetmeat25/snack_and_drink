@@ -21,7 +21,7 @@ const Dish = () => {
                 </Button>
             </Link>
             <div
-                style={{backgroundImage: `url(${process.env.PUBLIC_URL + dish?.imgPath})`}}
+                style={{backgroundImage: `url(${dish?.imgPath})`}}
                 className={classes.dishImg}>
 
             </div>
