@@ -1,11 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import DishItem from "./DishItem";
 import UpdateButton from "./UI/buttons/UpdateButton/UpdateButton";
 import {IconButton} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {cartSlice} from "../store/reducers/cartSlice";
+import {IDish} from '../interfaces/dish/dish'
 
-const DishList = ({dishes}) => {
+interface IDishProps{
+    dishes: IDish[];
+}
+const DishList : FC<IDishProps> = ({dishes}) => {
     const [dishNumber, setDishNumber] = useState(0)
     const dispatch = useDispatch()
     const {addToCart, deleteFromCart} = cartSlice.actions
@@ -23,8 +27,8 @@ const DishList = ({dishes}) => {
 
                     <rect width="50" height="50" rx="24.8718" fill="#F5F5F5"/>
                     <path d="M49.8718 40.3974L45.8718 43.8974L49.8718 47.3974" transform="translate(-24,-19)"
-                          stroke="#595959" stroke-width="2"
-                          stroke-linecap="round" stroke-linejoin="round"/>
+                          stroke="#595959" strokeWidth="2"
+                          strokeLinecap="round" strokeLinejoin="round"/>
 
                 </svg>
             </IconButton>
@@ -38,7 +42,7 @@ const DishList = ({dishes}) => {
 
                     <rect width="50" height="50" rx="24.8718" fill="white"/>
                     <path d="M45.8718 47.3974L49.8718 43.8974L45.8718 40.3974" transform="translate(-23,-19)"
-                          stroke="#595959" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          stroke="#595959" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 
                 </svg>
             </IconButton>

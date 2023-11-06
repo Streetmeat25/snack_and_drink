@@ -14,21 +14,13 @@ import {dishSlice} from "../store/reducers/dishSlice";
 import Cart from "../components/UI/cart/Cart";
 
 const Main = () => {
-    // const [dishes, setDish] = useState([])
-
-    // const [fetchPosts, isDishesLoading] = useFetching(async () => {
-    //     const response = await DishService.getAll()
-    //     setDish([...dishes, ...response])
-    // })
     const {data: dishes, error, isLoading} = dishApi.useFetchAllDishesQuery('')
     const dispatch = useDispatch()
     const {setDishes} = dishSlice.actions
 
-    dispatch(setDishes(dishes))
-
 
     useEffect(() => {
-
+        dispatch(setDishes(dishes))
     }, [])
 
     return (
