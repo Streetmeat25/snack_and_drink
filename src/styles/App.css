@@ -81,6 +81,8 @@ span{background: transparent}
 
 }
 .dish-name{
+  max-width: 50%;
+  flex-wrap: wrap;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;

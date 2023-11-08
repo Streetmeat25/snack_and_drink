@@ -51,7 +51,20 @@ const Filter = () => {
                 }}>
                     Салат
                 </button>
-
+                <select style={{
+                    border: 0,
+                    background: "transparent",
+                    fontFamily: 'Roboto',
+                    fontSize: "15px",
+                    fontStyle:"normal",
+                    fontWeight: 400,
+                    cursor: "pointer"
+                }}>
+                    <option value='test'>Ещё</option>
+                    <option value='test0'>Еще</option>
+                    <option value='test1'>Еще1</option>
+                    <option value='test2'>Еще2</option>
+                </select>
 
             </div>
         </div>
