@@ -1,61 +1,36 @@
 .filter {
-    display: flex;
-    flex-direction: column;
     width: 375px;
-    height: 132px;
-    justify-content: space-between;
-
+    margin-bottom: 25px;
 }
 
 .mealTime {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
-
+    justify-content: center;
+    margin-bottom: 33px;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
-
-.mealTimeButton {
+.mealTime p{
+    margin-right: 5px;
+}
+.mealTimeButton{
     background-color: transparent;
-    width: 113px;
-    height: 34px;
-    border-radius: 25px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    border: 0;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: underline dotted;
     cursor: pointer;
 }
 
-.mealTimeButton:hover {
-    color: white;
-    background: black;
-    border-radius: 25px;
-
-}
-
-.mealTimeButtonActive {
-    width: 113px;
-    height: 34px;
-    border-radius: 25px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    cursor: pointer;
-    color: white;
-    background: black;
-    border-radius: 25px;
-
-}
 
 .mealType {
     display: flex;
@@ -65,16 +40,40 @@
 
 .mealTypeButton {
     background-color: transparent;
+    width: 113px;
+    height: 34px;
+    border-radius: 25px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
     cursor: pointer;
 }
-
-.mealTypeButton:hover svg {
+.mealTypeButton:hover {
+    color: white;
+    background: black;
     border-radius: 25px;
-    border: 1px solid black;
+
 }
 
-.mealTypeButtonActive svg {
+.mealTypeButtonActive {
+    width: 113px;
+    height: 34px;
     border-radius: 25px;
-    border: 1px solid black;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    cursor: pointer;
+    color: white;
+    background: black;
+
 }
