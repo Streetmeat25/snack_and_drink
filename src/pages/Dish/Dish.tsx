@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import classes from './Dish.module.css'
 import {Link, useLocation} from "react-router-dom";
 import {Button, IconButton, SvgIcon} from "@mui/material";
+import Navbar from "../../components/UI/navbar/Navbar";
 const Dish = () => {
 
     const [isAddressesVisible, setAddressesVisible] = useState(false);
@@ -11,6 +12,7 @@ const Dish = () => {
     const dish = location?.state
     return (
         <div>
+            <Navbar/>
             <Link to={`/`}>
                 <Button startIcon={<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.33333 2.70831L1.625 5.41665L4.33333 8.12498" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -20,15 +22,14 @@ const Dish = () => {
                     Вернуться
                 </Button>
             </Link>
-            <div
-                style={{backgroundImage: `url(${dish?.imgPath})`}}
-                className={classes.dishImg}>
-
-            </div>
             {
                 isReceiptVisible ?
                     <div className={classes.main}>
+                        <div
+                            style={{backgroundImage: `url(${dish?.imgPath})`}}
+                            className={classes.dishImg}>
 
+                        </div>
                         <div className={classes.dishReceipt}>
                             <h1>Рецепт приготовления</h1>
                             <p>{dish?.receiptStory}</p>
@@ -43,12 +44,24 @@ const Dish = () => {
                     :
                     <div className={classes.main}>
 
-                        <div className={classes.dishDescription}>
-                            <h1>{dish?.name}</h1>
-                            <p>{dish?.description}</p>
+                        <div className={classes.dish}>
+                            <div
+                                style={{backgroundImage: `url(${dish?.imgPath})`}}
+                                className={classes.dishImg}>
+
+                            </div>
+                            <div className={classes.dishDescription}>
+                                <h1>{dish?.name}</h1>
+                                <p>{dish?.description}</p>
+                            </div>
+
+
+                        </div>
+                        <div className={classes.info}>
                             <a onClick={()=> setReceiptVisible(!isReceiptVisible)}>Как приготовит борщ? (рецепт)</a>
                             <button onClick={()=> setAddressesVisible(!isAddressesVisible)}>Места где можно покушат борщ</button>
                         </div>
+
                         { isAddressesVisible &&
                             dish?.orderAddresses?.map(adr =>
                                 <div className={classes.dishOrderAddresses} key={adr.id}>
@@ -60,7 +73,6 @@ const Dish = () => {
                                     <p>{adr?.addressStreet}</p>
                                     <p>{adr?.addressRegion}</p>
 
-                                    <hr align="right" width="465" size = "1" />
 
 
                                 </div>
