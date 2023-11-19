@@ -27,6 +27,7 @@
     "server": "json-server --watch db.json --port 5000",
     "start": "vite",
     "build": "tsc && vite build",
+    "build2": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -b new-design -d build"
   },
