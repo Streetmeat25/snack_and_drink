@@ -12,12 +12,14 @@ import {useDispatch} from "react-redux";
 import {filterSlice} from "../store/reducers/filterSlice";
 import {dishSlice} from "../store/reducers/dishSlice";
 import Cart from "../components/UI/cart/Cart";
-
+import data from '../../db.json'
 const Main = () => {
-    const {data: dishes, error, isLoading} = dishApi.useFetchAllDishesQuery('')
+    // const {data: dishes, error, isLoading} = dishApi.useFetchAllDishesQuery('')
+    const isLoading=false;
+    const error = false;
     const dispatch = useDispatch()
     const {setDishes} = dishSlice.actions
-
+    const dishes = data.dishes;
 
     useEffect(() => {
         dispatch(setDishes(dishes))
