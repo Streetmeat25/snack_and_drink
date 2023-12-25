@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import MyButton from "../components/UI/buttons/MyButton";
 import DishList from "../components/DishList";
 import Loader from "../components/UI/Loader/Loader";
@@ -13,6 +13,7 @@ import {filterSlice} from "../store/reducers/filterSlice";
 import {dishSlice} from "../store/reducers/dishSlice";
 import Cart from "../components/UI/cart/Cart";
 import data from '../../db.json'
+
 const Main = () => {
     // const {data: dishes, error, isLoading} = dishApi.useFetchAllDishesQuery('')
     const isLoading=false;
@@ -25,10 +26,12 @@ const Main = () => {
         dispatch(setDishes(dishes))
     }, [])
 
+
     return (
         <div className="main">
 
-            <Cart/>
+            {/*<Cart/>*/}
+
             <Filter/>
             {isLoading ? (
                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>

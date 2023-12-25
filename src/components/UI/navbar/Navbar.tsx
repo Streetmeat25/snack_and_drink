@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./Navbar.module.css"
 import {IconButton} from "@mui/material";
+import Cart from '../cart/Cart';
+
 const Navbar = () => {
+    const [isCart, setCart] = useState(false)
+
     return (
         <div className={classes.navbar}>
             <IconButton>
@@ -11,13 +15,18 @@ const Navbar = () => {
             </IconButton>
 
             <h1> Snack & Drink</h1>
-            <IconButton>
+            <IconButton onClick={()=> {
+                setCart(!isCart);
+            }}>
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16.2 5.85L7.2 12.6C6.45 13.17 6 14.055 6 15V28.5C6 30.15 7.35 31.5 9 31.5H27C28.65 31.5 30 30.15 30 28.5V15C30 14.055 29.55 13.17 28.8 12.6L19.8 5.85C19.2797 5.46283 18.6485 5.25372 18 5.25372C17.3515 5.25372 16.7203 5.46283 16.2 5.85ZM18.75 18.75C18.75 19.995 17.745 21 16.5 21V26.25C16.5 26.67 16.17 27 15.75 27C15.33 27 15 26.67 15 26.25V21C13.755 21 12.75 19.995 12.75 18.75V15C12.75 14.58 13.08 14.25 13.5 14.25C13.92 14.25 14.25 14.58 14.25 15V18.75H15V15C15 14.58 15.33 14.25 15.75 14.25C16.17 14.25 16.5 14.58 16.5 15V18.75H17.25V15C17.25 14.58 17.58 14.25 18 14.25C18.42 14.25 18.75 14.58 18.75 15V18.75ZM21.75 27C21.33 27 21 26.67 21 26.25V21.75H20.25C19.83 21.75 19.5 21.42 19.5 21V17.25C19.5 15.93 20.355 14.805 21.54 14.415C22.005 14.25 22.5 14.625 22.5 15.135V26.25C22.5 26.67 22.17 27 21.75 27Z" fill="white"/>
                 </svg>
 
             </IconButton>
-
+            { isCart ?
+                <Cart/>
+                : <></>
+            }
         </div>
     );
 };

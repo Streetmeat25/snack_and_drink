@@ -5,6 +5,7 @@ import {IconButton} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {cartSlice} from "../store/reducers/cartSlice";
 import {IDish} from '../interfaces/dish/dish'
+import useWindowSize from "../hooks/useWindowSize";
 
 interface IDishProps{
     dishes: IDish[];
@@ -13,39 +14,81 @@ const DishList : FC<IDishProps> = ({dishes}) => {
     const [dishNumber, setDishNumber] = useState(0)
     const dispatch = useDispatch()
     const {addToCart, deleteFromCart} = cartSlice.actions
+    const size = useWindowSize();
 
     return (
         <div className="dish-list">
             <DishItem dish={dishes[dishNumber]}/>
-            <IconButton
-                onClick={() => {
-                    if (dishNumber == 0) return
-                    setDishNumber(i => i - 1);
-                }}
-                style={{position: "absolute", top: "30%", left: "-6%", background: "transparent"}}>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {size.width < 500 ?
+                <>
+                    <IconButton
+                        className="button-left"
+                        onClick={() => {
+                            if (dishNumber == 0) return
+                            setDishNumber(i => i - 1);
+                        }}
+                        style={{position: "absolute", top: "30%", left: "0%", background: "transparent"}}>
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                    <rect width="50" height="50" rx="24.8718" fill="#F5F5F5"/>
-                    <path d="M49.8718 40.3974L45.8718 43.8974L49.8718 47.3974" transform="translate(-24,-19)"
-                          stroke="#595959" strokeWidth="2"
-                          strokeLinecap="round" strokeLinejoin="round"/>
+                            <rect width="50" height="50" rx="24.8718" fill="#F5F5F5"/>
+                            <path d="M49.8718 40.3974L45.8718 43.8974L49.8718 47.3974" transform="translate(-24,-19)"
+                                  stroke="#595959" strokeWidth="2"
+                                  strokeLinecap="round" strokeLinejoin="round"/>
 
-                </svg>
-            </IconButton>
-            <IconButton
-                onClick={() => {
-                    if (dishNumber == dishes.length - 1) return
-                    setDishNumber(i => i + 1);
-                }}
-                style={{position: "absolute", top: "30%", left: "94%"}}>
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                        </svg>
+                    </IconButton>
+                    <IconButton
+                        onClick={() => {
+                            if (dishNumber == dishes.length - 1) return
+                            setDishNumber(i => i + 1);
+                        }}
+                        style={{position: "absolute", top: "30%", left: "87%"}}>
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="transparent" xmlns="http://www.w3.org/2000/svg">
 
-                    <rect width="50" height="50" rx="24.8718" fill="white"/>
-                    <path d="M45.8718 47.3974L49.8718 43.8974L45.8718 40.3974" transform="translate(-23,-19)"
-                          stroke="#595959" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <rect width="50" height="50" rx="24.8718" fill="white"/>
+                            <path d="M45.8718 47.3974L49.8718 43.8974L45.8718 40.3974" transform="translate(-23,-19)"
+                                  stroke="#595959" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 
-                </svg>
-            </IconButton>
+                        </svg>
+                    </IconButton>
+                </>
+                :
+                <>
+                <IconButton
+                    className="button-left"
+                    onClick={() => {
+                        if (dishNumber == 0) return
+                        setDishNumber(i => i - 1);
+                    }}
+                    style={{position: "absolute", top: "30%", left: "-6%", background: "transparent"}}>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        <rect width="50" height="50" rx="24.8718" fill="#F5F5F5"/>
+                        <path d="M49.8718 40.3974L45.8718 43.8974L49.8718 47.3974" transform="translate(-24,-19)"
+                              stroke="#595959" strokeWidth="2"
+                              strokeLinecap="round" strokeLinejoin="round"/>
+
+                    </svg>
+                </IconButton>
+                 <IconButton
+                    onClick={() => {
+                        if (dishNumber == dishes.length - 1) return
+                            setDishNumber(i => i + 1);
+                    }}
+                    style={{position: "absolute", top: "30%", left: "94%"}}>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+
+                        <rect width="50" height="50" rx="24.8718" fill="white"/>
+                        <path d="M45.8718 47.3974L49.8718 43.8974L45.8718 40.3974" transform="translate(-23,-19)"
+                            stroke="#595959" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+
+                    </svg>
+                </IconButton>
+                </>
+
+            }
+
+
 
             <UpdateButton onClick={()=> dispatch(addToCart(dishes[dishNumber]))}>
                 + Добавить

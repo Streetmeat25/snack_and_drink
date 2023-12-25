@@ -15,6 +15,16 @@
     flex: 0 0 30%;
     margin-right: 22px;
 }
+.dishImgReceipt{
+    border-radius: 7px 7px 0 0 ;
+    background-color: lightgrey;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 22px;
+}
 
 .dish {
     background-color: transparent;
@@ -172,6 +182,44 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;;
+}
+@media screen and (max-width: 500px) {
+    .main{
+        width: 100%;
+    }
+    .dish{
+        display: contents;
+        padding: 0;
+        
+    }
+    .dishImg{
+        
+        border-radius: 20px 20px 0 0;
+        background-color: lightgrey;
+        width: 100%;
+        height: 400px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+
+    }
+    .dishDescription{
+        padding: 22px;
+    }
+    .info{
+        padding: 22px;
+    }
+    a button {
+        width: 100%;
+    }
+    .dishReceipt{
+        padding: 25px;
+    }
+    .dishOrderAddresses{
+        padding: 0 25px 20px 25px;
+    }
+
 }
 
 

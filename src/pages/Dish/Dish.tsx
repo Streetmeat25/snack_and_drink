@@ -27,7 +27,7 @@ const Dish = () => {
                     <div className={classes.main}>
                         <div
                             style={{backgroundImage: `url(${dish?.imgPath})`}}
-                            className={classes.dishImg}>
+                            className={classes.dishImgReceipt}>
 
                         </div>
                         <div className={classes.dishReceipt}>
